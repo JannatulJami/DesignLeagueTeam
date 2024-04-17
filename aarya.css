@@ -6,3 +6,31 @@
 h1{
    font-family: "Jacquard 12 Charted", system-ui;
 }
+
+/*======== Initialize ========= */
+
+*, ::before, ::after {
+  marging: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::root{
+  --accent-color: #34495e;
+  --bd-color: #ecf0f1;
+  --sub-font: "georgia, sans-serif;
+  --main-font: "Jacquard 12 Charted", system-ui;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
