@@ -16,3 +16,11 @@ const powerUpSfx = new Sfx('sfx/Mario Powerup.wav');
 const container = document.querySelector('.content');
 let ninja;
 
+function Sfx(src) {
+  this.sound = document.createElement('audio');
+  this.sound.src =src;
+  this.sound.setAttribute('preload', 'auto');
+  this.sound.setAttribute('controls', 'none');
+  this.sound.style.display = 'none';
+  
+}
