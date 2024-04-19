@@ -113,7 +113,7 @@ img {
   position: absolute;
   top: 70%;
   left: 50%;
-  transform: translate(-505, -100%);
+  transform: translate(-50%, -100%);
 }
 
 .floor{
@@ -128,4 +128,12 @@ img {
   justify-content : center;
   align-items: center;
 }
+
+#coin-img{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  height: 60px;
+}
+  
 
