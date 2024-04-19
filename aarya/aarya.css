@@ -19,6 +19,33 @@ h1{
   --bd-color: #ecf0f1;
   --sub-font: "georgia, sans-serif;
   --main-font: "Jacquard 12 Charted", system-ui;
+  --g-ratio: 1.618;
+}
+body {
+  font-family: var(--sub-font);
+  font-weight: 300;
+  background-color: var(--bg-color);
+  color: black;
+  font-size: 1.2rem;
+}
+hr{
+  margin-top: 0.5rem;
+  width: 70px;
+  height: 5px;
+  background-color: lightblue;
+  border: none;
+}
+h1,
+h2,
+h3,
+.title{
+  font-family: var(--main-font);
+  font-weight: 900;
+}
+.title{
+  color: var(--accent-color);
+}
+
 
 
 
