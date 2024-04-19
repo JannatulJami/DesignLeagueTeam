@@ -11,20 +11,22 @@ h1{
 
 /* Initalize */
 
-*, ::before, ::after {
-  marging: 0;
+*, 
+::before, 
+::after {
+  margin: 0;
   padding:0;
   box-sizing:border-box;
 }
 
 ::root{
-  --accent color: #ffffff;
-  --bd-color: #ecf11f;
-  --sub-font: "georgia", serif;
-  --main-font: "Bree Serif", serif;
-  --g-ratio; 1.618;
+  --accent color: #ffdacc;
+  --bd-color: #ff2acc;
+  --sub-font:"Bree Serif", serif;
+  --main-font: "Work Sans", sans-serif;
+  --g-ratio: 1.618;
 }
-body{
+body {
     font-family: var(--sub-font);
     fonr-weight: 300;
     background-color: var(--bg-color);
