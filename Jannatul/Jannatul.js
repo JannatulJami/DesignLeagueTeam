@@ -109,5 +109,5 @@ this.getColor = () => {
     container.appendChild(img);
   }
 };
-
+const 
   
