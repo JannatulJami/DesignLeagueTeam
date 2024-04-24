@@ -109,5 +109,40 @@ this.getColor = () => {
     container.appendChild(img);
   }
 };
-const 
+
+this.changeBtns = () => {
+  const btn = document.querySelector('button');
+  const btnContainer = document.querySelector('.btns-container');
+btnContainer.removeChild(btn);
+  btnContainer.innerHTML = 
+    "<button onclick='ninja.coin()' id='btnCoin'>Coin</button> \n <button onclick='ninja.pipe()' id='btnPipe'>Pipe</button> \n <button onclick ='ninja.powerUp()' id='btnPoerUp'>Power Up</button>";
+  const newBtns = document.querySelectorAll('button');
+  for (let i = 0; i < newBtns.length; i++) {
+    newBtns[i].style.setProperty('margin-left', '1.5rem');
+  }
+
+  //Add floor
+  const floor = document.createElement('div');
+  floor.setAttribute('class', 'floor');
+  container.appendChild(floor);
+  floor.innerHTML = 
+    'Name: ' +
+    ninja.name + 
+    '\xa0\xa0\xa0Age: ' +
+    ninja.age +
+    'px' +
+    '\xa0\xa0\xa0Height: ' +
+    ninja.height +
+    '\xa0\xa0\xa0Color: ' +
+    ninja.color;
+};
+this.getAge();
+this.getHeight();
+this.getColor();
+
+ninja = new Ninjas(name, age, height, color);
+this.appendImg();
+this.changeBtns();
+  
+    
   
