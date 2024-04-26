@@ -28,3 +28,14 @@ function Sfx(src) {
 };
 }
 
+function Ninjas(name, age, height, color) {
+  this.name = name;
+  this.age = age;
+  this.height = height;
+  this.color = color;
+
+  this.coin =() => {
+    //audio
+    conisSfx.play();
+
+    
