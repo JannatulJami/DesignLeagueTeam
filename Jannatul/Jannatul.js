@@ -20,7 +20,7 @@ function Sfx(src) {
   this.sound = document.createElement('audio');
   this.sound.src = src;
   this.sound.setAttribute('preload', 'auto'); 
-  this.soundsetAttribute('controls', 'auto');
+  this.sound.setAttribute('controls', 'auto');
   this.sound.style.display = 'none';
   document.body.appendChild(this.sound);
   this.play = function() { 
@@ -39,23 +39,23 @@ function Ninjas(name, age, height, color) {
     //audio
     coinSfx.play();
 const button = document.querySelector('#btnCoin');
-    button.style.setProperty('background-color', '#ffc1cc');
-    button.style.setProperty('border-color', '#e75480');
+    button.style.setProperty('background-color', '#2ecc71');
+    button.style.setProperty('border-color', '#2ecc71');
     button.style.setProperty('color', 'var(--bg-color)');
 
     //coin effect
-    const coinImg = document.creatElement('img');
+    const coinImg = document.createElement('img');
     coinImg.setAttribute('src', 'imgs/coin.png');
     coinImg.setAttribute('id', 'coin-img');
     coinImg.style.transform = 'translate(-50%,calc(-100% - ' + ninja.height + 'px)';
-    container.apprendChild(coinImg);
+    container.appendChild(coinImg);
     
     $('#coin-img').animate({ top: '60%', opacity: 1 }, 250);
     $('#coin-img').animate({ top: '70%', opacity: 0 }, 250, () => {
       $('#coin-img').remove();
-       button.style.setProperty('background-color', 'transparent'};
-       button.style.setProperty('border-color', 'var(--accent-color)'};
-       button.style.setProperty('color', 'var(--accent-color')
+       button.style.setProperty('background-color', 'transparent');
+       button.style.setProperty('border-color', 'var(--accent-color)');
+       button.style.setProperty('color', 'var(--accent-color');
 });
 };
     this.pipe = () => {
@@ -66,7 +66,7 @@ this.powerUp = () => {
 };
 }
 
-const prompUser = () +> {
+const promptUser = () +> {
   let name = prompt('Pick a name:') || 'Ninja';
   let age; 
   let height;
@@ -85,7 +85,7 @@ this.getAge = () => {
 this.getHeight = () => {
   height = prompt('Pick height: 1, 2, 3, 4') || 4;
   height = parseInt(height);
-  if (height === 1 || height === 2 || height === 3 || height 4) {
+  if (height === 1 || height === 2 || height === 3 || height === 4) {
     height = height * 64;
     return;
   } else {
@@ -93,8 +93,16 @@ this.getHeight = () => {
   }
 };
 this.getColor = () => {
+  color = prompt('Choose color: Red Blue Green') || 'red';
+  color = color.toLowerCase();
+  if (color === 'red' || color === 'blue' || color === 'green') {
+    return;
+  } else {
+this.getColor();
+  };
+  this.appendImg = () => {
   img = document.createElement('img');
-  let size = 'width'+ height +'px;height:' + height + 'px;'
+  let size = 'width:'+ height +'px;height:' + height + 'px;';
   if (color === 'blue') { 
   img.setAttribute('src', 'imgs/ninja1.png');
   img.setAttribute('style', size);
@@ -143,6 +151,6 @@ this.getColor();
 ninja = new Ninjas(name, age, height, color);
 this.appendImg();
 this.changeBtns();
-  
+};
     
   
