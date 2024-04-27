@@ -20,8 +20,8 @@ h1{
 }
 
 ::root{
-  --accent color: #ffdacc;
-  --bd-color: #ff2acc;
+  --accent-color: #34495e;
+  --bd-color: #ecf0f1;
   --sub-font:"Bree Serif", serif;
   --main-font: "Work Sans", sans-serif;
   --g-ratio: 1.618;
@@ -45,7 +45,8 @@ h1, h2, h3, .title {
   font-family: var(--main-font);
   font-weight: 900;
 }
-.title{ color: var(--accent-color);
+.title{ 
+  color: var(--accent-color);
 }
 
 .wrapper{
@@ -67,7 +68,8 @@ h1, h2, h3, .title {
 }
 .lab-info h2, 
 .lab-info h3 { 
-  font-weight : inital;}
+  font-weight : inital;
+}
 
 /*  Main Content  */
 .top-container {
@@ -121,7 +123,7 @@ img {
   height: 30%;
   position: absolute;
   bottom: 0;
-  background-color: #e7fae1;
+  background-color: #bbb;
   z-index: 10;
   font-family: 'Press Start 2P', cursive;
   display: flex;
