@@ -159,9 +159,18 @@ this.appendImg();
 this.changeBtns();
 };
 
-
-
-
+<body style="overflow: hidden !important;">
+  <div class="loader">
+    <div class="loader-container">
+        <svg height="224px" width="224px">
+          <rect class="animate" height="224px" width= "224px"/>
+        <svg>
+  <div class="box">
+        <div class="box__1"></div>
+        <div class="box__2"></div>
+    </div>
+  </div>
+</div>
 
 
 
