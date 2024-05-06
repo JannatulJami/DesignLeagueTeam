@@ -6,6 +6,7 @@
 <body>
 
 
+
 <h1>JavaScript Output Below</h1>
 <button type="button" onclick="addition()">
 Add 6+5</button>
@@ -46,7 +47,7 @@ document.getElementById("demo").innerHTML=""
 }
 
 </script>
-<div style="width:100px;height:100px;background-color:red;" onmousemove="moveFunk(event)" onmouseout="clearColor()" ></div>
+<div style="width:100px;height:100px;background-color:lightblue;" onmousemove="moveFunk(event)" onmouseout="clearColor()" ></div>
 </body>
 </html>
 
@@ -55,31 +56,37 @@ document.getElementById("demo").innerHTML=""
 <div id="animate"></div>
 </div>
 
+<button type = "button" onclick="moveUp()">moveUp</button>
+<div id="container">
+<div id="animate"></div>
+</div>
+
 <style>
 #animate{
-background-color: yellow;
+background-color: lavender;
 width: 50px;
 height: 50px;
 position: absolute;
 }
 #container{
-background-color: green;
+background-color: lightpink;
 width: 300px;
 height: 300px;
 position: relative;
 }
 </style>
-
 <script>
-function moveIt(){
+
+
+ function moveIt(){
 let id = null
 const elem = document.getElementById("animate")
 let pos=0
 clearInterval(id)
 id = setInterval(frame,5)
 function frame(){
-if (pos == 250) {
- clearInterval(id)
+if (pos == 250){
+clearInterval(id)
 }
 else{
 pos++
@@ -88,51 +95,31 @@ elem.style.left = pos + "px"
 }
 }
 }
-</script>
 
-
-
-
-
-<button type = "button" onclick="moveIt1()">moveIt1</button>
-<div id="container">
-<div id="animate1"></div>
-</div>
-
-<style>
-#animate1{
-background-color: yellow;
-width: 50px;
-height: 50px;
-position: absolute;
-}
-#container{
-background-color: green;
-width: 300px;
-height: 300px;
-position: relative;
-}
-</style>
-
-<script>
-function moveIt1(){
+function moveUp(){
 let id = null
-const elem = document.getElementById("animate1")
-let pos=0
+const elem = document.getElementById("animate")
+let pos = 250
 clearInterval(id)
 id = setInterval(frame,5)
+
 function frame(){
-if (pos == 250) {
- clearInterval(id)
+if (pos == 0){
+clearInterval(id)
 }
 else{
-pos++     
-elem.style.bottom = pos + "px"
-elem.style.right = pos + "px"
+pos--
+elem.style.top = pos + "px"
+elem.style.left = pos + "px"
 }
 }
 }
 </script>
 
+<style>
+body{
+background-color: lightyellow;
+}
+</style>
 
 
