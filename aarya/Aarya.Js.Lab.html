@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Basic</title>
+</head>
+<body>
+
+
+<h1>JavaScript Output Below</h1>
+<button type="button" onclick="addition()">
+Add 6+5</button>
+<button type = "button" onclick="subtraction()">
+Subtract 6-5</button>
+<button type = "button" onclick="multiplication()">
+Multiply 6(5)</button>
+<button type = "button" onclick="division()">
+Divide 6/5</button>
+<button type ="button" onclick="helloworld()">
+Greet</button>
+<p id="demo">This will change with javascript</p>
+<script>
+function addition(){
+document.getElementById("demo").innerHTML=6+5
+}
+function subtraction(){
+document.getElementById("demo").innerHTML=6-5
+}
+function multiplication(){
+document.getElementById("demo").innerHTML=6*5
+}
+function division(){
+document.getElementById("demo").innerHTML=6/5
+}
+function helloworld(){
+document.getElementById("demo").innerHTML="Hello World"
+}
+function moveFunk(e){
+let x = e.clientX
+let y = e.clientY
+let coor ="Coordinates: (" +x+ "," +y+ ")"
+document.getElementById("demo").innerHTML = coor
+}
+
+function clearCoor(){
+document.getElementById("demo").innerHTML=""
+}
+
+</script>
+<div style="width:100px;height:100px;background-color:red;" onmousemove="moveFunk(event)" onmouseout="clearColor()" ></div>
+</body>
+</html>
+
+<button type = "button" onclick="moveIt()">moveIt</button>
+<div id="container">
+<div id="animate"></div>
+</div>
+
+<style>
+#animate{
+background-color: yellow;
+width: 50px;
+height: 50px;
+position: absolute;
+}
+#container{
+background-color: green;
+width: 300px;
+height: 300px;
+position: relative;
+}
+</style>
+
+<script>
+function moveIt(){
+let id = null
+const elem = document.getElementById("animate")
+let pos=0
+clearInterval(id)
+id = setInterval(frame,5)
+function frame(){
+if (pos == 250) {
+ clearInterval(id)
+}
+else{
+pos++
+elem.style.top = pos + "px"
+elem.style.left = pos + "px"
+}
+}
+}
+</script>
+
+
+
+
+
+<button type = "button" onclick="moveIt1()">moveIt1</button>
+<div id="container">
+<div id="animate1"></div>
+</div>
+
+<style>
+#animate1{
+background-color: yellow;
+width: 50px;
+height: 50px;
+position: absolute;
+}
+#container{
+background-color: green;
+width: 300px;
+height: 300px;
+position: relative;
+}
+</style>
+
+<script>
+function moveIt1(){
+let id = null
+const elem = document.getElementById("animate1")
+let pos=0
+clearInterval(id)
+id = setInterval(frame,5)
+function frame(){
+if (pos == 250) {
+ clearInterval(id)
+}
+else{
+pos++     
+elem.style.bottom = pos + "px"
+elem.style.right = pos + "px"
+}
+}
+}
+</script>
+
+
+
