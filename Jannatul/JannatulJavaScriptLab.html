@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JavaScript Basic </title>
+
+</head>
+<body style = "background-color:#FFF4FA;">
+<center>
+<h1 style = "font-family: Brush Script MT,
+Lucida Handwriting; color:#FF6FBE;"> JavaScript Output Below</h1>
+<button type = "button" onclick ="addition()"> Add 6+5 </button>
+<p style = "font-family: Brush Script MT,
+Lucida Handwriting; font-weight: bold; color:#FF7F7F;" id = "demo">This will change with JavaScript</p>
+<button type ="button" onclick = "subtraction()"> Subtract 6-5 </button>
+<p style = "font-family: Brush Script MT,
+Lucida Handwriting; font-weight: bold; color:#FF7F7F;" id = "demo2">This will change with JavaScript</p>
+
+<button type= "button" onclick = "multiplication()"> Multiply 6*5</button>
+<p style = "font-family: Brush Script MT,
+Lucida Handwriting; font-weight: bold; color:#FF7F7F;" id = "demo3">This will change with JavaScript</p>
+
+<button type= "button" onclick = "division()"> Divide 6/5</button>
+<p style = "font-family: Brush Script MT,
+Lucida Handwriting; font-weight: bold; color:#FF7F7F;" id = "demo4">This will change with JavaScript</p>
+
+<button type= "button" onclick = "greet()"> Greet</button>
+<p style = "font-family: Brush Script MT,
+Lucida Handwriting; font-weight: bold; color:#56053E;" id = "demo5">This will change with JavaScript</p>
+
+<div style="background-color:#DB7093; width:200px; height:200px;" onmousemove="moveFunk(event)" onmouseout="clearColor()"></div>
+<button type="button" onclick="moveIt()">moveIt</button>
+<div id="container">
+<div id="animate"></div>
+</div>
+<button type="button" onclick="reverseIt()">Reverse</button>
+<div id = "container1">
+<div id = "reverse"></div>
+</div>
+
+
+<script>
+function addition(){
+   document.getElementById("demo").innerHTML = 6+5
+}
+
+function subtraction(){
+document.getElementById("demo2").innerHTML = 6-5
+}
+
+function multiplication(){
+document.getElementById("demo3").innerHTML = 6*5
+}
+
+function division(){
+document.getElementById("demo4").innerHTML = 6/5
+}
+
+function greet(){
+document.getElementById("demo5").innerHTML = "Hello World"
+}
+
+function moveFunk(e){
+let x = e.clientX
+let y = e.clientY
+let coor = "Coordinates: (" +x+","+y+")"
+document.getElementById("demo").innerHTML = coor
+}
+
+function clearCoor(){
+document.getElementById("demo2").innerHTML = " "
+}
+
+function moveIt(){
+let id = null
+const elem = document.getElementById("animate")
+let pos=0
+clearInterval(id)
+id = setInterval(frame,5)
+function frame (){
+  if (pos == 250) { 
+clearInterval(id)
+}
+else{
+pos++ 
+elem.style.top = pos + "px" 
+elem.style.left = pos + "px"
+}
+}
+}
+
+function reverseIt() {
+let id = null
+const elem = document.getElementById("reverse")
+let pos=0
+clearInterval(id)
+id = setInterval(frame,5)
+function frame (){
+  if (pos == 250) { 
+clearInterval(id)
+}
+else{
+pos++ 
+elem.style.bottom = pos + "px" 
+elem.style.right = pos + "px"
+}
+}
+}
+
+</script>
+
+<style>
+#animate{
+background-color: yellow;
+width:50px;
+height:50px;
+position:absolute;
+}
+#container{
+background-color: #FC99BC;
+width:300px;
+height:300px;
+position: relative;
+}
+
+#container1{
+background-color: #D8BFD8;
+width:300px;
+height:300px;
+position: relative;
+}
+
+#reverse{
+background-color: yellow;
+width:50px;
+height:50px;
+position:absolute;
+}
+</style>
+</center>
+</body>
+
+</html>
