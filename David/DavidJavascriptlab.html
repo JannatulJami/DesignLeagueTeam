@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JavaScript Basic </title>
+<style>
+div{
+background-color:red;
+width:100px;
+height:100px;
+}
+
+#animate{
+ background-color:yellow;
+ width:50px;
+ height:50px;
+ position: absolute;
+}
+#container{
+ background-color:green;
+ width:300px;
+ height:300px;
+ position: relative;
+}
+ </style>
+
+
+</head>
+<body>
+<h1>JavaScript Output Below</h1>
+
+<p id ="demo">This will change with JavaScript</p>
+<button type="button" onclick="subtraction()"> Subtract 6-5 </button>
+<button type="button" onclick="addition()"> Add 6+5 </button>
+<button type="button" onclick="multiplcation()"> Multiply 6*5</button>
+<button type= "button" onclick="division()">Divide 6/5</button>
+<button type="button" onclick="greet()"> Greet</button>
+<div onmousemove="moveFunk(event)" onmouseout="clearCoor()"></div>
+
+<button type="button" onclick=moveIt()">moveIt</button>
+<div id="container">
+  <div id="animate"></div>
+</div>
+
+
+<script>
+function moveIt(){
+let id = null
+const elem = document.getElementId("animate")
+let pos=0
+clearInterval(id)
+id = setInterval(frame,5)
+function frame(){
+   if (pos == 250){
+      clearInterval(id)
+    }
+    else{
+       pos++
+       elem.style.top = pos + "px"
+       elem.style.left = pos + "px"
+      }
+   }
+} 
+
+function addition(){
+   document.getElementById("demo").innerHTML = 6+5
+
+}
+
+function subtraction(){
+document.getElementById("demo").innerHTML = 6-5
+}
+
+function multiplcation(){
+document.getElementById("demo").innerHTML = 6*5
+}
+
+function division(){
+document.getElementById("demo").innerHTML = 6/5
+}
+
+function greet(){
+document.getElementById("demo").innerHTML = "Hello World"
+}
+
+function moveFunk(e){
+    let x = e.clientX
+    let y = e.clientY
+    let coor ="Coordinates: (" +x+ ","+y+")"
+    document.getElementById("demo").innerHTML = coor
+}
+function clearCoor(){
+   document.getElementById("demo").innerHTML= " "
+
+   }
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
