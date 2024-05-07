@@ -55,8 +55,7 @@ this.powerUp = () => {
   powerUpSfx.play();
 };
 }
-
-const promptUser => {
+const promptUser = () => {
   let name = prompt('Pick a name:') || 'Ninja';
   let age; 
   let height;
