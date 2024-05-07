@@ -71,7 +71,7 @@ const promptUser = () => {
   let age; 
   let height;
   let color; 
-}
+
 this.getAge = () => {
   age = prompt('Pick an age:') || '18';
   age = parseInt(age);
