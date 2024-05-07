@@ -152,7 +152,12 @@ height:100px;
   height:50px;
   postion:absolute;
 }
-
+#container{
+  background-color:green;
+  width:300px;
+  height:300px;
+  postion:relative;
+}
 </style>
 
 
