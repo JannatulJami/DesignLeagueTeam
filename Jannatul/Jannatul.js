@@ -1,14 +1,4 @@
-// Loader
-window.addEventListener('load', () => {
-  const loader = document.querySelector('.loader');
-  setTimeout(() => {
-    loader.setAttribute('style', 'opacity: 0;');
-  }, 500);
-  setTimeout(() => {
-    loader.parentNode.removeChild(loader);
-    document.body.style.overflow = 'inital';
-  }, 1000);
-});
+
 
 const coinSfx = new Sfx('sfx/Mario Coin.wav');
 const pipeSfx = new Sfx('sfx/Mario Pipe.wav');
@@ -66,7 +56,7 @@ this.powerUp = () => {
 };
 }
 
-const promptUser = ( => {
+const promptUser => {
   let name = prompt('Pick a name:') || 'Ninja';
   let age; 
   let height;
