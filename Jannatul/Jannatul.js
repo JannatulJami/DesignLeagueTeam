@@ -153,5 +153,5 @@ ninja = new Ninjas(name, age, height, color);
 this.appendImg();
 this.changeBtns();
 };
-    
+
   
