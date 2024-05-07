@@ -66,12 +66,12 @@ this.powerUp = () => {
 };
 }
 
-const promptUser = () +> {
+const promptUser = () => {
   let name = prompt('Pick a name:') || 'Ninja';
   let age; 
   let height;
   let color; 
-
+}
 this.getAge = () => {
   age = prompt('Pick an age:') || '18';
   age = parseInt(age);
