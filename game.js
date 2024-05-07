@@ -1,1 +1,1 @@
-const container = document.querySelector('.content');
+const container = document.querySelector('.game');
