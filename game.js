@@ -10,6 +10,15 @@ var character = {
   jumpSpeed:10,
   gravity:1
 };
+
+var monster = {
+  x: 200,
+  y : 200,
+  width:30,
+  height: 30,
+};
+
+let score = 0;
  
 var charcterImg = newImage();
 charcterImg.src = "game_img/cat.jpg";
