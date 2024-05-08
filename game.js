@@ -26,12 +26,12 @@ function drawScore() {
   ctx.fillText('Score: $(score)', 10, 30);
 }
  
-var charcterImg = newImage();
-charcterImg.src = "game_img/cat.jpg";
+var characterImg = newImage();
+characterImg.src = "game_img/cat.jpg";
 
 //Function to update character's position
 function updateCharacter() {
-  if (charcter.jumping){
+  if (character.jumping){
     character.y -= character.jumpSpeed-= character.gravity;
   
     if (character.y >= canvas.height - charcter.jumpHeight) {
