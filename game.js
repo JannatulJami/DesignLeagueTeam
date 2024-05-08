@@ -28,6 +28,7 @@ function drawScore() {
  
 var characterImg = newImage();
 characterImg.src = "game_img/cat.jpg";
+container.appendChild(characterImg);
 
 //Function to update character's position
 function updateCharacter() {
