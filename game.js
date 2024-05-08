@@ -4,7 +4,7 @@ var character = {
   x:50,
   y: canvas.height-70,
   width:40,
-  height:60,
+  height:50,
   jumping:false,
   jumpHeight:20,
   jumpSpeed:10,
@@ -19,13 +19,20 @@ var monster = {
 };
 
 let score = 0;
+
+function drawScore() {
+  ctx.fillStyle = 'black';
+  ctx.font = '24px Arial';
+  ctx.fillText('Score: $(score)', 10, 30);
+}
  
 var charcterImg = newImage();
 charcterImg.src = "game_img/cat.jpg";
 
-function updateCharcter() {
+//Function to update character's position
+function updateCharacter() {
   if (charcter.jumping){
-    charcter.y -= charcter.jumpSpeed-= charcter.gravity;
+    character.y -= character.jumpSpeed-= character.gravity;
   
     if (character.y >= canvas.height - charcter.jumpHeight) {
       character.jumping = false;
@@ -44,8 +51,7 @@ function jump() {
 
 //event listeener for jumping 
 function (event) {
-if (event.code === "u")
+if (event.code === "ArrowKeyUp")
   jump();
-}
-});
+};
   
