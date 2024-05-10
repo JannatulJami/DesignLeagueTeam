@@ -18,5 +18,14 @@ slides{
   position: relative;
   border: 2px solid #ccc;
 }
+slides{
+  width: 50%
+}
+game{
+  width: 25%
+}
+figma{
+  width: 25%
+}
 
 
